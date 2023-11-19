@@ -1,0 +1,19 @@
+ntroducing MeetIn - a Meeting Intelligence Application. A voice-to-text pipeline was developed for this research can transcribe audio recordings and produce spoken transcripts. The GPT-3.5 Turbo model can also be used by the project to respond to user-posted default and custom questions.
+
+Links to the Live application
+
+** Airflow: ** http://ec2-52-45-138-255.compute-1.amazonaws.com:8080/
+
+** Streamlit: ** http://ec2-52-45-138-255.compute-1.amazonaws.com/
+
+** FastAPI: ** http://ec2-52-45-138-255.compute-1.amazonaws.com:8000/docs
+
+** Codelabs: ** https://codelabs-preview.appspot.com/?file_id=1KwFY_zq4X5mGg0K8itpnN3hzrCtn11xF6HUpXBjeMa0#0
+
+To execute this project, you will need:
+
+Amazon Web Services account
+Docker Desktop Application
+AWS access and secret keys
+OpenAI (Chat GPT) API key
+Create an .env file in the main directory containing the following information .env AIRFLOW_UID=50000 AIRFLOW_PROJ_DIR=./airflow OPEN_AI_API_KEY= AWS_ACCESS_KEY= AWS_SECRET_KEY= S3_BUCKET_NAME=damg-team-5-assignment-4 AWS_LOG_GROUP_NAME=damg-assignment-4 AWS_CLOUD_WATCH_NAME_QUESTION_ANSWER=question-asked-with-answer AWS_CLOUD_WATCH_NAME_FILES_REQUESTED=files-requested-by-user AWS_CLOUD_WATCH_NAME_FILE_UPLOADED=file-uploaded-by-user AIRFLOW_USERNAME=airflow AIRFLOW_PASSWORD=airflow FRONTEND_BASE_URL=backend AIRFLOW_BASE_URL=airflow-webserver
