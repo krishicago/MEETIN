@@ -1,19 +1,72 @@
-Introducing MeetIn - a Meeting Intelligence Application. A voice-to-text pipeline was developed for this research can transcribe audio recordings and produce spoken transcripts. The GPT-3.5 Turbo model can also be used by the project to respond to user-posted default and custom questions.
+# MeetIn - Intelligent Meeting Transcription and Analysis Platform
 
-Links to the Live application
+## Project Overview
+MeetIn is an advanced voice-to-text application that leverages cutting-edge AI technologies to transform audio recordings into actionable insights. The project combines voice transcription, natural language processing, and intelligent question-answering capabilities.
 
-** Airflow: ** http://ec2-52-45-138-255.compute-1.amazonaws.com:8080/
+## Key Features
+- Automatic audio-to-text transcription
+- GPT-3.5 Turbo-powered Q&A system
+- Comprehensive meeting intelligence extraction
 
-** Streamlit: ** http://ec2-52-45-138-255.compute-1.amazonaws.com/
+## Application Links
+- **Airflow Dashboard:** http://ec2-52-45-138-255.compute-1.amazonaws.com:8080/
+- **Streamlit Frontend:** http://ec2-52-45-138-255.compute-1.amazonaws.com/
+- **FastAPI Endpoint:** http://ec2-52-45-138-255.compute-1.amazonaws.com:8000/docs
+- **Project Codelabs:** https://codelabs-preview.appspot.com/?file_id=1KwFY_zq4X5mGg0K8itpnN3hzrCtn11xF6HUpXBjeMa0#0
 
-** FastAPI: ** http://ec2-52-45-138-255.compute-1.amazonaws.com:8000/docs
+## Prerequisites
+Before setting up the project, ensure you have:
+- Amazon Web Services (AWS) account
+- Docker Desktop installed
+- AWS access and secret keys
+- OpenAI (ChatGPT) API key
 
-** Codelabs: ** https://codelabs-preview.appspot.com/?file_id=1KwFY_zq4X5mGg0K8itpnN3hzrCtn11xF6HUpXBjeMa0#0
+## Configuration Setup
 
-To execute this project, you will need:
+### Create .env File
+Create a `.env` file in the main project directory with the following configuration:
 
-Amazon Web Services account
-Docker Desktop Application
-AWS access and secret keys
-OpenAI (Chat GPT) API key
-Create an .env file in the main directory containing the following information .env AIRFLOW_UID=50000 AIRFLOW_PROJ_DIR=./airflow OPEN_AI_API_KEY= AWS_ACCESS_KEY= AWS_SECRET_KEY= S3_BUCKET_NAME=damg-team-5-assignment-4 AWS_LOG_GROUP_NAME=damg-assignment-4 AWS_CLOUD_WATCH_NAME_QUESTION_ANSWER=question-asked-with-answer AWS_CLOUD_WATCH_NAME_FILES_REQUESTED=files-requested-by-user AWS_CLOUD_WATCH_NAME_FILE_UPLOADED=file-uploaded-by-user AIRFLOW_USERNAME=airflow AIRFLOW_PASSWORD=airflow FRONTEND_BASE_URL=backend AIRFLOW_BASE_URL=airflow-webserver
+```env
+# Airflow Configuration
+AIRFLOW_UID=50000
+AIRFLOW_PROJ_DIR=./airflow
+AIRFLOW_USERNAME=airflow
+AIRFLOW_PASSWORD=airflow
+
+# AWS Configuration
+AWS_ACCESS_KEY=your_aws_access_key
+AWS_SECRET_KEY=your_aws_secret_key
+S3_BUCKET_NAME=damg-team-5-assignment-4
+
+# AWS CloudWatch Logging
+AWS_LOG_GROUP_NAME=damg-assignment-4
+AWS_CLOUD_WATCH_NAME_QUESTION_ANSWER=question-asked-with-answer
+AWS_CLOUD_WATCH_NAME_FILES_REQUESTED=files-requested-by-user
+AWS_CLOUD_WATCH_NAME_FILE_UPLOADED=file-uploaded-by-user
+
+# OpenAI Configuration
+OPEN_AI_API_KEY=your_openai_api_key
+
+# URL Configurations
+FRONTEND_BASE_URL=backend
+AIRFLOW_BASE_URL=airflow-webserver
+```
+
+### Important Notes
+- Replace placeholder values with your actual credentials
+- Keep your `.env` file secure and do not commit it to version control
+- Ensure all API keys and sensitive information are kept confidential
+
+## Getting Started
+1. Clone the repository
+2. Install Docker Desktop
+3. Configure the `.env` file with your credentials
+4. Run the application using Docker Compose
+
+## Security Recommendations
+- Use environment-specific configurations
+- Rotate API keys periodically
+- Implement proper access controls
+
+## Support
+For issues or questions, please open a GitHub issue or contact the project maintainers.
